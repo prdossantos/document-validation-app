@@ -76,7 +76,7 @@ const App = () => {
             setIsloading(false);
             setNetworkError(e.message);
         });
-    }
+    };
 
     const onFilter = ( filter: string, value: string ) => {
         if( filter === "sort" ) {
@@ -86,7 +86,7 @@ const App = () => {
             setFilterBlacklist(value);
         }
 
-    }
+    };
 
     useEffect(() => {
         setIsloading(true);

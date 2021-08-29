@@ -11,20 +11,20 @@ th.sort {
   cursor: pointer;
 }
 
-th.sort.desc:after,
-th.sort.asc:after {
+th.sort.desc::after,
+th.sort.asc::after {
   content: " ";
   position: relative;
   left: 5px;
   border: 8px solid transparent;
 }
 
-th.sort.desc:after {
+th.sort.desc::after {
   top: 18px;
   border-top-color: silver;
 }
 
-th.sort.asc:after {
+th.sort.asc::after {
   bottom: 15px;
   border-bottom-color: silver;
 }

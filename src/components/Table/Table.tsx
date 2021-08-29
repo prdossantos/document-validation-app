@@ -11,7 +11,7 @@ const Table = ( props: TablePropTypes<Document[]>) => {
         const _sort = sort === "asc" ? "desc" : "asc";
         setSort(_sort);
         onFilter("sort", _sort);
-    }
+    };
     useEffect(() => {
         setItems(rows);
     }, [rows]);

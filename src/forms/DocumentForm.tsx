@@ -51,7 +51,7 @@ const DocumentForm = (props: DocumentFormPropTypes) => {
             </div>
         </form>
     );
-}
+};
 
 DocumentForm.defaultProps = DocumentFormPropTypesDefault;
 
