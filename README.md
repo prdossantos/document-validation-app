@@ -6,8 +6,6 @@ Gerenciamento de CPF/CNPJ (CRUD) com a possibilidade filtros, ordenação e marc
 
 1.  ReactJS
 2.  Boostrap
-3.  Gulp
-4.  Axios
 
 ## Como usar localmente
 
