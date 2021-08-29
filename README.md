@@ -1,3 +1,5 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4af9d4089fdd4dca9da1e93fecaa1e65)](https://www.codacy.com/gh/prdossantos/document-validation-app/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=prdossantos/document-validation-app&amp;utm_campaign=Badge_Grade)
+
 # Gerenciamento de documentos
 
 Gerenciamento de CPF/CNPJ (CRUD) com a possibilidade filtros, ordenação e marcação de alguns em uma blacklist
