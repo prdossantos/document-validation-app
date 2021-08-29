@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  react-app:
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: bash -c "npm install; npm start"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/app
+    container_name: react-app
+    networks:
+      - reactapp
+networks:
+    reactapp:
+        driver: bridge

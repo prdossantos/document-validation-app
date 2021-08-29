@@ -1,0 +1,35 @@
+body {
+  background-color: #282c34;
+  color: white;
+}
+
+a {
+  color: #61dafb;
+}
+
+th.sort {
+  cursor: pointer;
+}
+
+th.sort.desc:after, 
+th.sort.asc:after {
+  content: ' ';
+  position: relative;
+  left: 5px;
+  border: 8px solid transparent;
+}
+
+th.sort.desc:after {
+  top: 18px;
+  border-top-color: silver;
+}
+
+th.sort.asc:after {
+  bottom: 15px;
+  border-bottom-color: silver;
+}
+
+th.sort.desc, 
+th.sort.asc {
+  padding-right: 10px;
+}
