@@ -1,4 +1,4 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4af9d4089fdd4dca9da1e93fecaa1e65)](https://www.codacy.com/gh/prdossantos/document-validation-app/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=prdossantos/document-validation-app&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4af9d4089fdd4dca9da1e93fecaa1e65)](https://www.codacy.com/gh/prdossantos/document-validation-app/dashboard?utm_source=github.com&utm_medium=referral&utm_content=prdossantos/document-validation-app&utm_campaign=Badge_Grade)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/4af9d4089fdd4dca9da1e93fecaa1e65)](https://www.codacy.com/gh/prdossantos/document-validation-app/dashboard?utm_source=github.com&utm_medium=referral&utm_content=prdossantos/document-validation-app&utm_campaign=Badge_Coverage)
 
 # Gerenciamento de documentos
@@ -12,8 +12,8 @@ Gerenciamento de CPF/CNPJ (CRUD) com a possibilidade filtros, ordenação e marc
 
 ## Como usar localmente
 
-1.  Clone este repositório e execute o comando: `npm install`.
-2.  Execute o comando: `npm start`.
+1.  Clone este repositório e execute o comando: `yarn install`.
+2.  Execute o comando: `yarn start`.
 3.  Você precisa da <https://github.com/prdossantos/document-validation-api> rodando
 4.  Por padrão irá iniciar em <http://localhost:3000>.
 
@@ -38,3 +38,13 @@ src/
   - schemas       # Contém os esquemas da regra de negócio
   - forms         # Contém os formulários da aplicação
 ```
+
+## Como rodar os testes
+
+Para rodar os testes utilize o camando abaixo:
+
+Isso irá rodar todos os testes
+`yarn test --collect-coverage`
+
+Também será gerado um relatório de cobertura de código na pasta `./coverage`.
+Você pode visualizar no navegador acessessando `./coverage/lcov-report/index.html`
