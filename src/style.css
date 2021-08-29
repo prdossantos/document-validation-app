@@ -11,9 +11,9 @@ th.sort {
   cursor: pointer;
 }
 
-th.sort.desc:after, 
+th.sort.desc:after,
 th.sort.asc:after {
-  content: ' ';
+  content: " ";
   position: relative;
   left: 5px;
   border: 8px solid transparent;
@@ -29,7 +29,7 @@ th.sort.asc:after {
   border-bottom-color: silver;
 }
 
-th.sort.desc, 
+th.sort.desc,
 th.sort.asc {
   padding-right: 10px;
 }

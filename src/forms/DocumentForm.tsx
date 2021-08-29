@@ -7,7 +7,7 @@ import CpfCnpj from "@react-br-forms/cpf-cnpj-mask";
 const DocumentForm = (props: DocumentFormPropTypes) => {
     const { onSubmit, error } = props;
     const [hasError, setHasError] = useState(false);
-    const [document, setDocument] = useState('');
+    const [document, setDocument] = useState("");
     const submit = () => {
         if( !document ) {
             setHasError(true);
@@ -16,14 +16,14 @@ const DocumentForm = (props: DocumentFormPropTypes) => {
         setHasError(false);
         onSubmit(document);
         setDocument("");
-    }
+    };
 
     useEffect(() => {
-        setHasError(error !== "")
-    }, [error])
+        setHasError(error !== "");
+    }, [error]);
 
     return (
-        <form className={classNames(`needs-validation`, {
+        <form className={classNames("needs-validation", {
             "was-validated": hasError
         })}>
             <div className="input-group ">
@@ -53,6 +53,6 @@ const DocumentForm = (props: DocumentFormPropTypes) => {
     );
 }
 
-DocumentForm.defaultProps = DocumentFormPropTypesDefault
+DocumentForm.defaultProps = DocumentFormPropTypesDefault;
 
 export default DocumentForm;

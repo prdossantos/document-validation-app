@@ -10,6 +10,6 @@ const DocumentFormPropTypesDefault: DocumentFormPropTypes = {
     loadingText: "loading...",
     onSubmit: () => {},
     error: ""
-}
+};
 
-export default DocumentFormPropTypesDefault
+export default DocumentFormPropTypesDefault;

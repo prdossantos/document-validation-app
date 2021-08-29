@@ -13,7 +13,7 @@ const Table = ( props: TablePropTypes<Document[]>) => {
         onFilter("sort", _sort);
     }
     useEffect(() => {
-        setItems(rows)
+        setItems(rows);
     }, [rows]);
 
     return (
@@ -61,6 +61,6 @@ const Table = ( props: TablePropTypes<Document[]>) => {
     );
 }
 
-Table.defaultProps = TablePropTypesDefault
+Table.defaultProps = TablePropTypesDefault;
 
 export default Table;

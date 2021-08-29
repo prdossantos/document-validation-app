@@ -16,6 +16,6 @@ const TablePropTypesDefault: TablePropTypes<any> = {
     onDelete: () => {},
     toggleBlacklist: () => {},
     onFilter: () => {}
-}
+};
 
-export default TablePropTypesDefault
+export default TablePropTypesDefault;

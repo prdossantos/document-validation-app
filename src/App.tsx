@@ -51,7 +51,7 @@ const App = () => {
             setIsloading(false);
             setNetworkError(e.message);
         });
-    }
+    };
 
     const createDocument = (document: string) => {
         setIsloading(true);
