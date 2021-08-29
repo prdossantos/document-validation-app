@@ -13,20 +13,20 @@ test(`2. caso: erro de validação <DocumentForm />`, async () => {
     
     render(<DocumentForm /> );
     
-    userEvent.click(screen.getByTitle("Salvar"))
+    userEvent.click(screen.getByTitle("Salvar"));
 
-    await waitFor(() => expect(screen.getByText("Documento inválido")).toBeInTheDocument() )  
+    await waitFor(() => expect(screen.getByText("Documento inválido")).toBeInTheDocument() );
 });
 
 test(`3. caso: passando documento <DocumentForm />`, async () => {
     
     render(<DocumentForm /> );
     
-    userEvent.type(screen.getByPlaceholderText("Cadastrar novo CPF/CNPJ"), "123456789")
+    userEvent.type(screen.getByPlaceholderText("Cadastrar novo CPF/CNPJ"), "123456789");
 
-    userEvent.click(screen.getByTitle("Salvar"))
+    userEvent.click(screen.getByTitle("Salvar"));
 
-    await waitFor(() => screen.getByText("Documento inválido"))
+    await waitFor(() => screen.getByText("Documento inválido"));
 
-    expect(screen.getByText("Documento inválido")).toBeInTheDocument()
+    expect(screen.getByText("Documento inválido")).toBeInTheDocument();
 });

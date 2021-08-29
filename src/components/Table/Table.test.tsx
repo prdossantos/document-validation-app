@@ -51,9 +51,9 @@ test(`3. caso: ordenar dados <Table />`, async () => {
         toggleBlacklist={toggleBlacklist}
     /> );
     
-    userEvent.click(screen.getByTitle("Toggle Blacklist 123654789"))
+    userEvent.click(screen.getByTitle("Toggle Blacklist 123654789"));
 
-    await waitFor(() => expect(screen.getByText("Sim")).toBeInTheDocument() )  
+    await waitFor(() => expect(screen.getByText("Sim")).toBeInTheDocument() );
 });
 
 test(`4. caso: removendo um registro <Table />`, async () => {
@@ -82,9 +82,9 @@ test(`4. caso: removendo um registro <Table />`, async () => {
         onDelete={onDelete}
     /> );
     
-    userEvent.click(screen.getByTitle("Remover 1236547890"))
+    userEvent.click(screen.getByTitle("Remover 1236547890"));
 
-    await waitFor(() => expect(screen.getAllByText("123654789")).toHaveLength(1) )  
+    await waitFor(() => expect(screen.getAllByText("123654789")).toHaveLength(1) );
 });
 
 test(`5. caso: ordenando os registros <Table />`, async () => {
@@ -94,20 +94,20 @@ test(`5. caso: ordenando os registros <Table />`, async () => {
         {_id: "asdf14", document: "123654789", isBlacklist: false}
     ];
 
-    const onFilter = (  ) => {}
+    const onFilter = (  ) => {};
     
-    const {rerender} = render(<Table 
+    render(<Table 
         columns={[{name: "col", sort: true}]}
         rows={items} 
         onFilter={onFilter}
     /> );
 
-    userEvent.click(screen.getByTestId("col-0"))
+    userEvent.click(screen.getByTestId("col-0"));
 
-    await waitFor(() => expect(screen.getByTitle("col sort desc")).toBeInTheDocument() )  
+    await waitFor(() => expect(screen.getByTitle("col sort desc")).toBeInTheDocument() );
 
-    userEvent.click(screen.getByTestId("col-0"))
+    userEvent.click(screen.getByTestId("col-0"));
 
-    await waitFor(() => expect(screen.getByTitle("col sort asc")).toBeInTheDocument() ) 
+    await waitFor(() => expect(screen.getByTitle("col sort asc")).toBeInTheDocument() );
     
 });
