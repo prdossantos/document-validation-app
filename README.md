@@ -39,6 +39,9 @@ src/
   - forms         # Contém os formulários da aplicação
 ```
 
+*Os ```components``` e ```forms``` forão criados para serem independentes( sem lógica de negócio ), assim podem ser reaproveitados.
+Desta forma toda lógica fica contida nas páginas( no caso apenas no ```App.tsx``` ), assim, temos componentes com teste unitário e as páginas com testes de integração( **não foram aplicados neste projeto** ).
+
 ## Como rodar os testes
 
 Para rodar os testes utilize o camando abaixo:
