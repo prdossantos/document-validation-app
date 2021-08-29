@@ -14,26 +14,26 @@ const App = () => {
     const onDelete = (document: Document) => {
         setIsloading(true);
         fetch(`${process.env.REACT_APP_API_URL}/document/${document.document}`, {
-            method: 'DELETE',
-            headers: { 'Content-Type': 'application/json' }
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" }
         })
         .then((res) => res.json())
         .then((result) => {
 
-            setItems([...items].filter((item) => item._id !== document._id))
+            setItems([...items].filter((item) => item._id !== document._id));
             setIsloading(false);
             setNetworkError("");
         }).catch((e) => {
             setIsloading(false);
             setNetworkError(e.message);
         });
-    }
+    };
 
     const toggleBlacklist = (document: Document) => {
         setIsloading(true);
         fetch(`${process.env.REACT_APP_API_URL}/document/${document.document}`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({})
         })
         .then((res) => res.json())
@@ -44,7 +44,7 @@ const App = () => {
                     item = result.data;
                 }
                 return item;
-            }))
+            }));
             setIsloading(false);
             setNetworkError("");
         }).catch((e) => {
@@ -56,8 +56,8 @@ const App = () => {
     const createDocument = (document: string) => {
         setIsloading(true);
         fetch(`${process.env.REACT_APP_API_URL}/document`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ document })
         })
         .then((res) => res.json())
@@ -79,11 +79,11 @@ const App = () => {
     }
 
     const onFilter = ( filter: string, value: string ) => {
-        if( filter === 'sort' ) {
-            setFilterSort(value)
+        if( filter === "sort" ) {
+            setFilterSort(value);
         }
-        if( filter === 'blacklist' ) {
-            setFilterBlacklist(value)
+        if( filter === "blacklist" ) {
+            setFilterBlacklist(value);
         }
 
     }
@@ -93,14 +93,14 @@ const App = () => {
         fetch(`${process.env.REACT_APP_API_URL}/documents?sort=${filterSort}&isBlacklist=${filterBlacklist}`)
         .then((res) => res.json())
         .then((result) => {
-            setItems(result.data)
+            setItems(result.data);
             setNetworkError("");
             setIsloading(false);
         }).catch((e) => {
             setIsloading(false);
             setNetworkError(e.message);
         });
-    }, [filterBlacklist, filterSort])
+    }, [filterBlacklist, filterSort]);
 
     return (
         <div className="container">
