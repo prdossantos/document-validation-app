@@ -20,25 +20,27 @@ const Table = ( props: TablePropTypes<Document[]>) => {
         <table className="table tabl-sm table-striped table-light">
             {columns.length > 0 && <thead>
                 <tr>
-                    {columns.map( ( column: any ) => {
-                        return <th onClick={column.sort ? onSort : () => {}} key={column.name} className={classNames(column.sort ? sort : "", {
+                    {columns.map( ( column: any, index: number ) => {
+                        return <th onClick={column.sort ? onSort : () => {}} key={column.name} title={`${column.name} sort ${sort}`} data-testid={`col-${index}`} className={classNames(column.sort ? sort : "", {
                             "sort": column.sort
                         })}>{column.name}</th>
                     })}
                 </tr>
             </thead>}
             <tbody>
-                { items.length > 0 && !isLoading && items.map( ( item ) => <tr key={`tbody-${item._id}`}>
+                { items.length > 0 && !isLoading && items.map( ( item, index: number ) => <tr key={`tbody-${item._id}`}>
                     <td> {item.document} </td>
                     <td> {item.isBlacklist ? "Sim" : "Não"} </td>
                     <td align="right"> 
                         <button
-                            className="btn btn-sm btn-info mx-3" 
+                            className="btn btn-sm btn-info mx-3"
+                            title={`Toggle Blacklist ${item.document}`}
                             onClick={() => toggleBlacklist(item)}
                         >
                             {item.isBlacklist ? "Remover" : "Add"} Blacklist
                         </button> 
                         <button
+                            title={`Remover ${item.document}`}
                             className="btn btn-sm btn-danger" 
                             onClick={() => onDelete(item)}
                         >

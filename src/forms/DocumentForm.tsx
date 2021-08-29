@@ -41,6 +41,7 @@ const DocumentForm = (props: DocumentFormPropTypes) => {
                     className="btn btn-outline-secondary" 
                     type="button" 
                     id="button-addon2" 
+                    title="Salvar"
                     onClick={submit}
                 >
                     Salvar

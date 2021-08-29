@@ -1,4 +1,5 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4af9d4089fdd4dca9da1e93fecaa1e65)](https://www.codacy.com/gh/prdossantos/document-validation-app/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=prdossantos/document-validation-app&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/4af9d4089fdd4dca9da1e93fecaa1e65)](https://www.codacy.com/gh/prdossantos/document-validation-app/dashboard?utm_source=github.com&utm_medium=referral&utm_content=prdossantos/document-validation-app&utm_campaign=Badge_Coverage)
 
 # Gerenciamento de documentos
 
